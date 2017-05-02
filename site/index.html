@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>jQuery UI Slider - Snap to increments</title>
+  <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.0/themes/base/jquery-ui.css">
+  <link rel="stylesheet" href="/resources/demos/style.css">
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.0/jquery-ui.js"></script>
+ <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+ 
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script>
+  $( function() {
+    $( "#slider1" ).slider({
+      value:5,
+      min: 0,
+      max: 10,
+      step: 1,
+      slide: function( event, ui ) {
+        $( "#amount1" ).val( "" + ui.value );
+      }
+    });
+    $( "#amount1" ).val( "" + $( "#slider1" ).slider( "value" ) );
+  } );
+
+     $( function() {
+    $( "#slider2" ).slider({
+      value:5,
+      min: 0,
+      max: 10,
+      step: 1,
+      slide: function( event, ui ) {
+        $( "#amount2" ).val( "" + ui.value );
+      }
+    });
+    $( "#amount2" ).val( "" + $( "#slider2" ).slider( "value" ) );
+  } );
+  </script>
+</head>
+<body>
+
+ <div class="container">
+<br/><br/>
+
+ <div class="row">
+<div id="slider1" class="col-lg-2"></div>
+<div class="col-lg-1">
+<input type="text" id="amount1" readonly style="border:0; color:#f6931f; font-weight:bold;">
+</div>
+ </div>
+<br/>
+ <div class="row">
+<div id="slider2" class="col-lg-2"></div>
+<div class="col-lg-1">
+<input type="text" id="amount2" readonly style="border:0; color:#f6931f; font-weight:bold;">
+</div>
+ </div>
+
+
+
+ </div>
+</body>
+</html>
