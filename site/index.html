@@ -16,6 +16,7 @@
     <script src="../bower_components/Scripts/jquery-3.1.1.min.js"></script>
     <script src="../bower_components/Scripts/bootstrap.min.js"></script>
     <script src="https://code.jquery.com/ui/1.12.0/jquery-ui.js"></script>
+     <script src="../bower_components/Scripts/mysite.js"></script>
     <style>
         li.first{
             border-radius:5px 0 0 5px;
@@ -24,94 +25,28 @@
         }
     </style>
     <script>
-  
-        $(function () {
-
-            //datepicker
-            $("#datepicker").datepicker({
-                constrainInput: true,
-                showOn: 'button',
-                buttonText: '<span class="glyphicon glyphicon-calendar"></span>'
-            });
-
-            //collapse
-            $('.collapse').on('shown.bs.collapse', function () {
-                $(this).parent().find('.glyphicon-menu-down').removeClass('glyphicon-menu-down').addClass('glyphicon-menu-up');
-            }).on('hidden.bs.collapse', function () {
-                $(this).parent().find('.glyphicon-menu-up').removeClass('glyphicon-menu-up').addClass('glyphicon-menu-down');
-            })
-
-            $('.collapse').on('shown.bs.collapse', function () {
-                $(this).parent().find('.glyphicon-plus-sign').removeClass('glyphicon-plus-sign').addClass('glyphicon-minus-sign');
-            }).on('hidden.bs.collapse', function () {
-                $(this).parent().find('.glyphicon-minus-sign').removeClass('glyphicon-minus-sign').addClass('glyphicon-plus-sign');
-            })
-
-            $('#expandall').click(function () {
-                $('.panel-collapse.collapse').collapse('show');
-
-            })
-
-            $('#collapseall').click(function () {
-                $('.panel-collapse.collapse.in').collapse('hide');
-
-            })
-
-            $('#showorhideall').click(function () {
-                $('.panel-collapse.collapse').collapse('show');
-
-            }).click(function () {
-                $('.panel-collapse.collapse.in').collapse('hide');
-
-            })
-
-            //Modal
-            $('#btnShowModal').click(function () {
-                $('#loginModal2').modal('show');
-            })
-
-            $('#btnHideModal').click(function () {
-                $('#loginModal2').modal('hide');
-            })
-
-            $('#loginModal2').on('show.bs.modal', function () {
-                alert('modal is about to be displayed')
-            })
-
-            $('#loginModal2').on('shown.bs.modal', function () {
-                alert('modal is displayed')
-            })
-
-            $('#loginModal2').on('hide.bs.modal', function () {
-                alert('modal is about to be hidden')
-            })
-
-            $('#loginModal2').on('hidden.bs.modal', function () {
-                alert('modal is hidden')
-            })
-
-            //tooltip
-            $('[data-toggle="tooltip"]').tooltip()
-            
-            ;
-
-            var mapCanvas = document.getElementById("googlemap");
+       $(function(){
+             var mapCanvas = document.getElementById("googlemap");
             var myCenter = new google.maps.LatLng(38.907, -77.1);
-            var mapOptions = { center: myCenter, zoom: 8 };
+            var mapOptions = { center: myCenter, zoom: 9 };
             var map = new google.maps.Map(mapCanvas, mapOptions);
             var marker = new google.maps.Marker({
                 position: myCenter//,
                 //animation: google.maps.Animation.BOUNCE
             });
             marker.setMap(map);
-        })
+
+       })
+            
+      
     </script>
 </head>
 <body>
     <div class="container-fluid">
         <br />
         <div class="text-center">
-            <h4>Welcome to my github page. Play around a bit with the Buttons, more content is coming soon!</h4>
+            <h4>Welcome to my github page</h4>
+              <h4>Play around a bit with the Buttons, more content is coming soon!</h4>
         </div>
         <br />
         <div class="row">
@@ -181,9 +116,9 @@
                 </form>
                 <br />
                 <div class="well">
-                    <h4>C# <span class="label label-default">Beginner</span></h4>
-                    <h4>ASP.NET MVC <span class="label label-info">Beginner</span></h4>
-                    <h4>AngularJS <span class="label label-success">Beginner</span></h4>
+                    <h4>C# <span class="label label-default">Experienced</span></h4>
+                    <h4>ASP.NET MVC <span class="label label-info">Experienced</span></h4>
+                    <h4>AngularJS <span class="label label-success">Experienced</span></h4>
                     <a>Inbox <span class="badge">10</span></a><br />
                     <a>Sent <span class="badge">25</span></a>
                 </div>
@@ -303,7 +238,7 @@
                     </ul>
                     <div class="tab-content">
                         <div id="homeTab" class="tab-pane active">
-                            <h3>HOme page</h3>
+                            <h3>Home page</h3>
                             <p>Home page content</p>
                             <p>tab-pane fade in</p>
                             <p>nav nav-tabs nav-justified</p>
@@ -339,7 +274,7 @@
 
 
             <div class="col-lg-4">
-                <div id="googlemap" style="width:100%;height:260px">
+                <div id="googlemap" style="width:100%;height:280px">
                 </div>
                 <br />
                 <ol class="breadcrumb">
