@@ -212,4 +212,11 @@ body {
       width:360px;
       margin:0 auto 15px;
     }
+
+/*super small*/
+@media(max-width: 479px){
+  #menu-tile,#specials-tile{
+    width:280px;
+    margin:0 auto 15px;
+  }
 }
